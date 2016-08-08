@@ -1,7 +1,7 @@
 class TodoItem
   include Listable
   include UdaciListErrors
-  attr_reader :description, :due, :priority
+  attr_reader :description, :due, :priority, :type
 
   def initialize(description, options={})
     @description = description
@@ -10,6 +10,7 @@ class TodoItem
       raise InvalidPriorityValue, "Priority value is invalid!"
     end
     @priority = options[:priority]
+    @type = "todo"
   end
   def details
     format_description(@description) + "due: " +
