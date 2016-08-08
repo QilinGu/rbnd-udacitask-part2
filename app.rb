@@ -1,5 +1,5 @@
 require 'chronic'
-# require 'colorize'
+require 'colorize'
 # Find a third gem of your choice and add it to your project
 require 'date'
 require_relative "lib/listable"
@@ -31,7 +31,6 @@ new_list.add("event", "Vacation", start_date: "Dec 20", end_date: "Dec 30")
 new_list.add("event", "Life happens")
 new_list.add("link", "https://www.udacity.com/", site_name: "Udacity Homepage")
 new_list.add("link", "http://ruby-doc.org")
-new_list.all
 
 # SHOULD RETURN ERROR MESSAGES
 # ----------------------------
@@ -41,7 +40,7 @@ new_list.all
 
 # DISPLAY UNTITLED LIST
 # ---------------------
-# new_list.all
+new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
