@@ -20,4 +20,11 @@ module Listable
  		@due ? @due.strftime("%D") : "No due date"
  	end
   end
+  def format_type
+  	if @type == 'event'
+  		"(#{@type.capitalize})  "
+  	else
+  		"(#{@type.capitalize})   "
+  	end
+  end
 end

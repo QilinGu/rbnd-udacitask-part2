@@ -1,6 +1,7 @@
 require 'chronic'
 require 'colorize'
 # Find a third gem of your choice and add it to your project
+require "terminal-table"
 require 'date'
 require_relative "lib/listable"
 require_relative "lib/errors"
@@ -45,3 +46,26 @@ new_list.all
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
 new_list.filter("event")
+
+# DEMO PRINTING WITH TABLE FORMAT WITH TERMINAL-TABLE GEM
+# ------------------------
+new_list.table_output
+
+# DEMO SET/CHANGE PRIORITY FUNCTION FOR TODO ITEMS 
+# ------------------------
+new_list.priority(2, "low")
+new_list.table_output
+
+# DEMO ERROR HANDLING FOR SET_PRIORITY
+#new_list.priority(4, "high")
+#new_list.priority(1, "very important")
+
+# DEMO DELETING MULTIPLE ITEMS, NEED TO INPUT AN ARRAY OF ITEM INDEXES
+# ------------------------
+new_list.multi_delete([1, 3, 2])
+new_list.table_output
+
+# DEMO ERROR HANDLING FOR FILTER
+new_list.filter("todo")
+#new_list.filter("plan")
+
